@@ -8,16 +8,16 @@ public class CellPhoneApplication {
 
     static String userText;
 
-    static CellPhone userCell = new CellPhone();
-
     public static void main(String[] args) {
+        CellPhone userCell1 = new CellPhone();
+        CellPhone userCell2 = new CellPhone();
 
-        getPhoneData();
-        phoneData();
+        getPhoneData(userCell1);
+        phoneData(userCell1);
 
     }
 
-    private static void phoneData() {
+    private static void phoneData(CellPhone userCell) {
         System.out.println("Serial Number: " + userCell.getSerialNumber());
         System.out.println("Model: " + userCell.getModel());
         System.out.println("Carrier: " + userCell.getCarrier());
@@ -25,7 +25,7 @@ public class CellPhoneApplication {
         System.out.println("Owner: " + userCell.getOwner());
     }
 
-    public static void getPhoneData() {
+    public static void getPhoneData(CellPhone userCell) {
 
         System.out.println("What is the serial number?");
         userText = userInput.nextLine();
