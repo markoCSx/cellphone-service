@@ -15,6 +15,11 @@ public class CellPhoneApplication {
         getPhoneData(userCell1);
         phoneData(userCell1);
 
+        getPhoneData(userCell2);
+        phoneData(userCell2);
+
+        userCell1.dial(userCell2.getPhoneNumber());
+
     }
 
     private static void phoneData(CellPhone userCell) {
